@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+import db.views
 
 urlpatterns = [
+    url(r'^dashbridge/$', db.views.index),
     url(r'^admin/', admin.site.urls),
 ]
